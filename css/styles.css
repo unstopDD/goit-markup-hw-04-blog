@@ -11,12 +11,15 @@ html {
 * {
   box-sizing: inherit;
 }
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
 body {
   background-color: var(--white-color);
   color: var(--gray-color);
   font-family: var(--primary-font-stack);
   line-height: 1.2;
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -24,14 +27,18 @@ body {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  margin: 76px 314px 103px;
-  padding: 0;
+  padding-left: 170px;
+  padding-right: 170px;
+  padding-top: 76px;
+  padding-bottom: 103px;
+  padding: 76px 170px 103px 170px;
+  margin: 0;
 }
 .nav-link {
   display: block;
 }
 .page-header .nav-link {
-  font-size: 24px;
+  font-size: 14px;
   line-height: 1.7;
   text-transform: uppercase;
   text-decoration: none;
@@ -48,45 +55,56 @@ body {
   padding: 0px;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: 0;
+  margin-bottom: 55px;
 }
 
 .content {
   list-style: none;
-  margin-left: 150px;
-  margin-right: 150px;
-  width: 420px;
+  flex-basis: calc(50% - 30px);
+  margin-right: 60px;
+  margin-bottom: 130px;
 }
 .content:nth-child(2n) {
-  margin-left: 0;
-  margin-right: 150px;
+  margin-right: 0;
 }
-.content:nth-child(2n + 1) {
-  margin-right: 60px;
+.content:nth-last-child(-n + 2) {
+  margin-bottom: 0;
 }
 
+.image {
+  margin-bottom: 30px;
+}
 .main .about {
+  margin: 0;
   color: var(--text-color);
   font-size: 14px;
   font-weight: 300;
   text-transform: uppercase;
   font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 30px;
 }
 .main .title {
+  margin: 0;
+  margin-bottom: 40px;
   font-size: 30px;
   font-weight: 400;
 }
 .main .text {
+  margin: 0;
   font-size: 14px;
   line-height: 1.7;
 }
 .footer {
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 71px;
 }
 .button {
   font-size: 20px;
   line-height: 1.7;
   font-family: var(--primary-font-stack);
   color: var(--gray-color);
+}
+.button:hover,
+.button:focus {
+  color: #03a9f3;
 }
